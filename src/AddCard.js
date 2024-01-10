@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import AddList from './AddList';
+import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 
 const AddCard = ({inputs,setInputs}) => {
 
@@ -10,16 +11,28 @@ const AddCard = ({inputs,setInputs}) => {
     };
 
 return (
-    <div className='item-card'>
+    <DragDropContext >
+    <Droppable droppableId='item-card'>
+    {(provided)=>(
+        <div className='item-card' {...provided.droppableProps} ref={provided.innerRef}>
             {inputs.map((input, index) => (
-                <div className='list-card'>
+                <Draggable key={input} draggableId={input} index={index}>
+                {(provided)=>(
+                    <div className='list-card' key={index} ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
                     {input}
-                    <button className="add-card" onClick={(e)=>handleRemoveInput(index)}>Removee</button>
+                    <button className="add-card" onClick={(e)=>handleRemoveInput(index)}>Remove</button>
                     <AddList/>
                 </div>
+                )}
+                </Draggable>
                 ))
             }
+            {provided.placeholder}
     </div>
+    )}
+    
+    </Droppable>
+    </DragDropContext>
   );
 };
 

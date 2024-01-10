@@ -1,4 +1,5 @@
-import React,{ useState } from "react"
+import React,{ useState } from "react";
+import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 
 const AddList=()=>{
     const [listDescription, setListDescription] = useState(['']);
@@ -38,7 +39,7 @@ const AddList=()=>{
               ))
             }
                 <button className="add-card" onClick={handleList}>
-                    Add List
+                    Add Card
                 </button>
             </React.Fragment>
         </div>
