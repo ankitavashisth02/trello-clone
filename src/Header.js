@@ -1,3 +1,5 @@
+
+
 const Workspaces = ()=>{
     return(
         <select className="workspace" defaultValue="Workspace">
@@ -23,14 +25,15 @@ const Header = ()=>{
     return (
         <div className="navbar">
             <ul className="navbar-list">
+            <li>{<i class="fa-solid fa-braille"></i>}</li>
                 <li className="item1">Trello</li>
-                <Workspaces/>
-                <More/>
+                <li><Workspaces/></li>
+                <li><More/></li>
                 <li>icon3</li>
-                <input type="text" id="search" placeholder="Search"/>
-                <li>Notification</li>
-                <li>Information</li>
-                <li>Login</li>
+                <li><input type="text" id="search" placeholder="Search"/></li>
+                <li>{<i class="fa-regular fa-bell"></i>}</li>
+                <li>{<i class="fa-solid fa-circle-info"></i>}</li>
+                <li>{<i class="fa-solid fa-arrow-right-to-bracket"></i>}</li>
             </ul>
         </div>
     )

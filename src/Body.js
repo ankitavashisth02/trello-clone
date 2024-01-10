@@ -23,6 +23,10 @@ const Body = () => {
   };
 
   return (
+    <div className="main-body">
+    <div className="nav-body">
+        My Trello Board
+      </div>
     <div className="body">
       {showComponent && <AddCard inputs={inputs} setInputs={setInputs} />}
       <div className="add-card-div">
@@ -44,6 +48,7 @@ const Body = () => {
           + Add another list
         </button>
       </div>
+    </div>
     </div>
   );
 };

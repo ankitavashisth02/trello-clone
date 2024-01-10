@@ -1,27 +1,42 @@
 .navbar{
     top:0;
     font-size: 16px;
-    padding: 10px;
     width: 100%;
     height : 50px;
     margin-left:0px;
     border: 1px solid pink;
-    background-color:#CD519D;
+    background-color:#9F2B68;
+}
+
+.workspace{
+    border-radius: 10px;;
+}
+
+.more , .workspace{
+    border-radius: 10px;
+    background-color: #9F2B68;
+    color: white;
+    border : 1px solid #9F2B68;
+}
+
+.search{
+    border-radius: 10px;
+    opacity: 0.8;
 }
 
 .item1{
     font-size:24px;
 }
 
-.search{
-    border-radius: 5px;
-}
-
 .navbar-list{
     list-style: none;
     display : flex;
     color:white;
-    justify-content: space-around ;
+    padding-bottom: 10px;
+}
+.navbar-list li{
+    padding: 10px ;
+    padding-bottom: 10px;
 }
 
 .body-container{
@@ -29,10 +44,51 @@
     grid-template-columns: 1fr 5fr;
 }
 
+.head-board{
+    color: white;
+    background-color: #990F4B;
+    width:  100%;
+    height: 20px;
+}
+
 .sidebar{
     height : 960px; 
     border : 1px solid pink;
-    background-color: #CD519D;
+    background-color: #9F2B68;
+    color: white;
+    border: 1px solid pink;
+}
+
+.inside-one{
+    padding:3px;
+    float:left;
+    margin-right: 8px;
+    border: 1px solid green;
+    background-color: lightgreen;
+}
+
+.sidebar-one{
+    font-size: 20px;
+    justify-content: space-around;
+    border : 1px solid #CD519D;
+    padding: 5px;
+    height: 30px;
+}
+
+.sidebar-two{
+    font-size: 16px;
+    justify-content: space-around;
+    text-align: center;
+    padding-top: 5px;
+    height: 30px;
+}
+
+.sidebar-three{
+    font-size: 16px;
+    justify-content: space-around;
+    text-align: center;
+    padding-top: 10px;
+    height: 30px;
 }
 
 .item-card{
@@ -49,7 +105,7 @@
 }
 
 .body{
-    background-color: pink;
+    background-color: #C54B8C;
     display: flex;
     align-items: flex-start;
 }
@@ -62,6 +118,18 @@
 }
 .add-card:hover{
     background-color: #d3d3d3;
+}
+
+.main-body{
+    display : grid;
+    grid-template-rows: 1fr 20fr;
+}
+
+.nav-body{
+    background-color: #6C244C;
+    color: white;
+    font-size : 20px;
+    padding : 15px;
 }
 
 .add-card-div{
