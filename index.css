@@ -1,45 +1,7 @@
-.navbar{
-    top:0;
-    font-size: 16px;
-    width: 100%;
-    height : 50px;
-    margin-left:0px;
-    border: 1px solid pink;
-    background-color:#9F2B68;
-}
-
-.workspace{
-    border-radius: 10px;;
-}
-
-.more , .workspace{
-    border-radius: 10px;
-    background-color: #9F2B68;
-    color: white;
-    border : 1px solid #9F2B68;
-}
-
-.search{
-    border-radius: 10px;
-    opacity: 0.8;
-}
-
-.item1{
-    font-size:24px;
-}
-
-.navbar-list{
-    list-style: none;
-    display : flex;
-    color:white;
-    padding-bottom: 10px;
-}
-.navbar-list li{
-    padding: 10px ;
-    padding-bottom: 10px;
-}
 
 .body-container{
+    position: relative;
+    z-index:0;
     display:grid;
     grid-template-columns: 1fr 5fr;
 }
@@ -52,7 +14,7 @@
 }
 
 .sidebar{
-    height : 960px; 
+    height : 100%; 
     border : 1px solid pink;
     background-color: #9F2B68;
     color: white;
@@ -71,24 +33,45 @@
     font-size: 20px;
     justify-content: space-around;
     border : 1px solid #CD519D;
-    padding: 5px;
+    padding: 10px;
     height: 30px;
 }
 
 .sidebar-two{
     font-size: 16px;
     justify-content: space-around;
-    text-align: center;
-    padding-top: 5px;
+    text-align: left;
+    padding-top: 8px;
     height: 30px;
+    padding-left: 10px;
+    justify-content: space-around;
 }
 
-.sidebar-three{
+.sidebar-one:hover{
+    background-color: #7E2A5C;
+}
+
+.sidebar-two:hover{
+    background-color: #7E2A5C;
+}
+
+.sidebar-three:hover{
+    background-color: #7E2A5C;
+}
+
+.sidebar-three, .sidebar-four{
     font-size: 16px;
     justify-content: space-around;
-    text-align: center;
-    padding-top: 10px;
+    text-align: left;
+    padding-top: 15px;
+    padding-left:5px;
     height: 30px;
+    font-style: italic;
+}
+
+.sidebar-four:hover{
+    font-style: normal;
+    background-color: #6C244C;
 }
 
 .item-card{
@@ -110,13 +93,19 @@
     align-items: flex-start;
 }
 
+.body-add-card{
+    padding : 5px;
+    border-radius: 8px;
+    border : 1px solid #d3d3d3;
+}
+
 .add-card{
     padding : 5px;
     margin-top: 10px;
     border-radius: 10px;
     border : 1px solid #d3d3d3;
 }
-.add-card:hover{
+.add-card:hover, .body-add-card:hover{
     background-color: #d3d3d3;
 }
 
@@ -130,6 +119,7 @@
     color: white;
     font-size : 20px;
     padding : 15px;
+    padding-right: 10px;
 }
 
 .add-card-div{

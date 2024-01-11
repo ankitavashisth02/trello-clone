@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import AddList from './AddList';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 
-const AddCard = ({inputs,setInputs}) => {
+const AddCard = ({inputs,setInputs,modal,setModal}) => {
 
     const [updateInput, setUpdateInput] = useState(inputs);
 
@@ -32,7 +32,7 @@ return (
                     <div className='list-card' key={index} ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
                     {input}
                     <button className="add-card" onClick={(e)=>handleRemoveInput(index)}>Remove</button>
-                    <AddList/>
+                    <AddList modal={modal} setModal={setModal}/>
                     </div>
                 )}
                 </Draggable>

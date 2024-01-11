@@ -1,4 +1,4 @@
-
+import './navbar.css';
 
 const Workspaces = ()=>{
     return(
@@ -10,31 +10,52 @@ const Workspaces = ()=>{
     )
 }
 
-const More = ()=>{
+const Templates = ()=>{
     return(
-        <select className="more" defaultValue="More">
-            <option value="more">More</option>
-            <option value="recent">Recent Boards</option>
-            <option value="star">Star Boards</option>
+        <select className="more" defaultValue="templates">
             <option value="templates">Templates</option>
-      </select>
+            <option value="recent">Recent Boards</option>
+        </select>
+    )
+}
+
+const Recent = ()=>{
+    return(
+        <select className="more" defaultValue="templates">
+            <option value="templates">Recent</option>
+            <option value="recent">Recent Boards</option>
+        </select>
+    )
+}
+
+const Starred = ()=>{
+    return(
+        <select className="more" defaultValue="templates">
+            <option value="templates">Starred</option>
+            <option value="recent">Recent Boards</option>
+        </select>
     )
 }
 
 const Header = ()=>{
     return (
         <div className="navbar">
-            <ul className="navbar-list">
-            <li>{<i class="fa-solid fa-braille"></i>}</li>
-                <li className="item1">Trello</li>
-                <li><Workspaces/></li>
-                <li><More/></li>
-                <li>icon3</li>
-                <li><input type="text" id="search" placeholder="Search"/></li>
-                <li>{<i class="fa-regular fa-bell"></i>}</li>
-                <li>{<i class="fa-solid fa-circle-info"></i>}</li>
-                <li>{<i class="fa-solid fa-arrow-right-to-bracket"></i>}</li>
-            </ul>
+            <div className='one-half'>
+                <div>{<i class="fa-solid fa-braille"></i>}</div>
+                <div className='title'>Trello</div>
+                <div><Workspaces/></div>
+                <div><Templates/></div>
+                <div><Recent/></div>
+                <div><Starred/></div>
+                <div><button className='btn'>Create</button></div>
+            </div>
+<div></div>
+            <div className='second-half'>
+                <div><input type="text" className="search" placeholder="Search"/></div>
+                <div>{<i class="fa-regular fa-bell"></i>}</div>
+                <div>{<i class="fa-solid fa-circle-info"></i>}</div>
+                <div>{<i class="fa-solid fa-arrow-right-to-bracket"></i>}</div>
+            </div>
         </div>
     )
 }

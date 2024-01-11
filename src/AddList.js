@@ -1,8 +1,12 @@
 import React,{ useState } from "react";
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 
-const AddList=()=>{
+const AddList=({modal, setModal})=>{
     const [listDescription, setListDescription] = useState(['']);
+
+    const handleEditButton = (e)=>{
+        setModal(true);
+    }
     
     const handleList = (e)=>{
         setListDescription([...listDescription,'']);
@@ -21,8 +25,9 @@ const AddList=()=>{
     };
 
     return(
+        <React.Fragment>
         <div>
-            <React.Fragment>
+            
             {
                 listDescription.map((input, index) => (
                 <div key={index}>
@@ -34,14 +39,18 @@ const AddList=()=>{
                     placeholder="add description..."
                   />
                   <button className="add-card" onClick={(e)=>handleRemoveInput(index)}>Delete</button>
+                  <button className="add-card" onClick={handleEditButton}>Edit</button>
+                  
                 </div>
               ))
             }
                 <button className="add-card" onClick={handleList}>
                     Add Card
                 </button>
-            </React.Fragment>
         </div>
+
+        </React.Fragment>
+        
     )
 }
 

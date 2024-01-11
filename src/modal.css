@@ -1,0 +1,38 @@
+.modal{
+    background-color: #E8E9EB;
+    top: 70;
+    height: auto;
+    width : 700px;
+    border-radius: 10px;
+    position :absolute;
+    left:30%;
+    z-index:1;
+    display : grid;
+    grid-template-rows: 1fr 10fr;
+}
+
+.modal-navbar{
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    padding : 10px;
+}
+
+.modal-body-container{
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+}
+
+.modal-body{
+    padding : 10px;
+}
+
+.modal-body *{
+    padding: 3px;
+}
+
+.modal-sidebar-one *, .actions *{
+    padding: 3px;
+    background-color: #d3d3d3;
+    margin-right:5px;
+    margin-bottom: 5px;
+}
